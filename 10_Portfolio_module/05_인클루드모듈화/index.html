@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio, RWD Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon/montblanc_fav32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav180.png">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="./css/rwd_complete.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <!-- Plugin JS -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="./js/jquery.bxslider.js"></script>
+    <!-- Page JS -->
+    <style>
+        article {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        #gallery_wrap {
+            max-width: 1920px;
+        }
+        #gallery_wrap img {
+            width: 100%;
+        }
+    </style>
+    <!-- 모듈화 스크립트 -->
+    <script>
+        $(function(){
+            $('header').load('./include/header.html',function(){
+                $('.menu_toggle_btn').click(function(){
+            $('.gnb').stop().toggle();
+            });
+        });
+        $('footer').load('./include/footer.html');
+        });
+
+    </script>
+     <script>
+          $(function(){
+            $('.slider_img').bxSlider({
+                mode: 'fade',
+                auto: true,
+                autoControls: false,
+                autoHover: true,
+                pager: true,
+                slideWidth: 1920
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header class="cf container">
+            헤더영역
+        </header>
+        <!-- /1. Header -->
+
+        <!-- 2. Slider -->
+        <article class="slider">
+            <h2 class="slider_img">
+                <img src="./images/p_images/slide01.jpg" alt="슬라이드 이미지01">
+                <img src="./images/p_images/slide02.jpg" alt="슬라이드 이미지02">
+            </h2>
+        </article>
+        <!-- /2. Slider -->
+
+        <!-- 3. Contents -->
+        <main class="content">
+            <!-- 3-1. Display -->
+            <section class="display_section container">
+                <div class="cf">
+                    <h2 class="sec_title">WE ARE</h2>
+                    <p class="desc">
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br>
+                        piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    </p>
+                </div>
+            </section>
+            <!-- /3-1. Display -->
+            <!-- 3-2. Promotion -->
+            <section class="promotion_section container">
+                <h2>
+                    <ul class="promotion_list cf">
+                        <li>
+                            <a href="#">
+                                <img src="./images/s_images/promo01.png" alt="홈 아이콘">
+                                <h3>HOME</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/s_images/promo02.png" alt="회원정보 아이콘">
+                                <h3>WE&nbsp;ARE</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/s_images/promo03.png" alt="작업물 아이콘">
+                                <h3>WORK</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/s_images/promo04.png" alt="글쓰기 아이콘">
+                                <h3>CONTACT&nbsp;US</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry.
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </h2>
+            </section>
+            <!-- /3-2. Promotion -->
+
+            <hr class="divider">
+
+            <!-- 3-3. Work -->
+            <section class="work_section">
+                <div>
+                    <h2 class="sec_title container">WORK</h2>
+                    <ul class="work_list cf">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-1</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work01.jpg" alt="포트폴리오1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-2</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work02.jpg" alt="포트폴리오2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-3</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work03.jpg" alt="포트폴리오3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-4</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work04.jpg" alt="포트폴리오4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-5</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work05.jpg" alt="포트폴리오5">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-6</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work06.jpg" alt="포트폴리오6">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-7</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work07.jpg" alt="포트폴리오7">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>Portfolio-8</h3>
+                                    <span>WEB/PRINT</span>
+                                </div>
+                                <img src="./images/p_images/work08.jpg" alt="포트폴리오8">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- /3-3. Work -->
+
+            <hr class="m_divider">
+
+            <!-- 3-4. Blog -->
+            <section class="blog_section container">
+                <div class="cf">
+                    <h2 class="sec_title">BLOG</h2>
+                    <ul class="blog_list cf">
+                        <li>
+                            <a href="#">
+                                <img src="./images/p_images/blog01.jpg" alt="블로그 이미지01">
+                            </a>
+                            <time>Mar 1, 1982</time>
+                            <a href="#">
+                                <h3>
+                                    There are many variations of passages of Lorem Ipsum
+                                </h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/p_images/blog02.jpg" alt="블로그 이미지02">
+                            </a>
+                            <time>Mar 15, 1982</time>
+                            <a href="#">
+                                <h3>
+                                    There are many variations of passages of Lorem Ipsum
+                                </h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/p_images/blog03.jpg" alt="블로그 이미지03">
+                            </a>
+                            <time>Mar 20, 1982</time>
+                            <a href="#">
+                                <h3>
+                                    There are many variations of passages of Lorem Ipsum
+                                </h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- /3-4. Blog -->
+
+            <!-- 3-5. Contact -->
+            <section class="contact_section container">
+                <div class="cf">
+                    <h2 class="sec_title">CONTACT</h2>
+                    <form action="#" class="form_box">
+                        <fieldset class="cf">
+                            <legend class="blind">CONTACT&nbsp;US</legend>
+                            <!-- Input Form -->
+                            <div class="form">
+                                <label for="name" class="blind">Name</label>
+                                <input type="text" id="name" placeholder="Name">
+                                <label for="phone" class="blind">Phone</label>
+                                <input type="tel" id="phone" placeholder="Phone">
+                                <label for="email" class="blind">E-Mail</label>
+                                <input type="email" id="email" placeholder="Email Address">
+                            </div>
+                            <!-- /Input Form -->
+                            <!-- Textarea Form -->
+                            <div class="txta">
+                                <label for="message" class="blind">Message</label>
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            <!-- /Textarea Form -->
+                        </fieldset>
+                        <!-- Button -->
+                        <div class="send_btn">
+                            <button type="submit">SEND MESSAGE</button>
+                        </div>
+                        <!-- /Button -->
+                    </form>
+                </div>
+            </section>
+            <!-- /3-5. Contact -->
+        </main>
+        <!-- /3. Contents -->
+
+        <!-- 4. Footer -->
+        <footer>
+            푸터영역
+        </footer>
+        <!-- /4. Footer -->
+    </div>
+    <script>
+        $('.menu_toggle_btn').click(function(){
+            $('.gnb').stop().toggle();
+        })
+    </script>
+</body>
+</html>

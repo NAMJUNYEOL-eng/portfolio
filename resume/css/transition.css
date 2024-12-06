@@ -1,0 +1,63 @@
+@charset "utf-8";
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#wrap h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+}
+.prod_list img{
+    width: 300px;
+    height: 200px;
+}
+.prod_list li{
+    margin: 50px;
+    /* 플롯 */
+    float: left;
+    position: relative;
+    cursor: pointer;
+    /* 트랜지션 중간과정 안보이게 하기 */
+    overflow: hidden;
+}
+.prod_list .caption h2{
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 12px;
+}
+.prod_list .caption h2+p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.prod_list .caption h2+p+p{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 트랜지션 효과 */
+.caption{
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 포지션 */
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: 1;
+    /* 투명도 */
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+/* [중요] 호버시 동작 */
+.prod_list li:hover .caption{
+    opacity: 1;
+    transform: translateY(200px);
+}

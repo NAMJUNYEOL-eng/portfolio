@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module, preventDefault()</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR',sans-serif;
+            color: #333;
+        }
+        nav {
+            width: 50%;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 1000px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            padding: 0 24px;
+        }
+        nav ul li a {
+            font-size: 1.2rem;
+        }
+        nav ul li a:hover {
+            color: orangered;
+        }
+        /* 모듈 경고창 CSS */
+        .alert {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 4%;
+            z-index: 9999999;
+            /* 로딩시 안보이도록 코딩 */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </nav>
+    <!-- <div class="alert"><img src="./images/alert.png" alt="준비중 경고창"></div> -->
+<!-- module -->
+<script>
+    // $('<div class="alert"><img src="./images/alert.png" alt="준비중 경고창"></div>').appendTo('body');
+    $('body').append('<div class="alert"><img src="./images/alert.png" alt="준비중 경고창"></div>');
+
+    // 이벤트 = 속성 href가 # 인 객체 클릭했을때 경고창
+    $('a[href="#"]').click(function(e){
+        e.preventDefault();
+        $('.alert').stop().fadeIn(700);
+
+        setTimeout(function(){
+            $('.alert').fadeOut(700);
+        },1500);
+    });
+</script>
+<!-- /module -->
+</body>
+</html>
